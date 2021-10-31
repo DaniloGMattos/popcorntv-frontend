@@ -1,8 +1,8 @@
 import React from "react";
-export function Series() {
+export function Television() {
   return (
     <>
-      <h1>Series</h1>
+      <h1>Television</h1>
     </>
   );
 }

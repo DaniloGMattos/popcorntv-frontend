@@ -1,8 +1,11 @@
-.container {
+import styled from "styled-components";
+
+export const Container = styled.nav`
   display: flex;
   width: 100%;
   height: 5rem;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
   .navigation {
     display: flex;
     align-items: center;
@@ -19,4 +22,4 @@
       margin-right: 5rem;
     }
   }
-}
+`;

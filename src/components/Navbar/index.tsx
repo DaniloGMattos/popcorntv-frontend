@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 
-import "./styles.scss";
+import { Container } from "./styles";
+
 export const Navbar = () => {
   return (
-    <>
+    <Container>
       <nav className='container'>
         <ul className='navigation'>
           <li>
@@ -14,13 +15,13 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to='/'>Series</Link>
+            <Link to='/'>Filmes</Link>
           </li>
           <li>
-            <Link to='/movies'>Filmes</Link>
+            <Link to='/television'>Televisão</Link>
           </li>
         </ul>
       </nav>
-    </>
+    </Container>
   );
 };
