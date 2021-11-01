@@ -9,15 +9,15 @@ This project was built as a developer portolio project, with the initial objecti
 
 ## How to run this project:
 
-Before you do anything in this project, be sure to execute the [back-end project first](https://github.com/DaniloGMattos/popcorntv-backend), after that you can follow this steps: 
+**Before you do anything in this project, be sure to execute the [back-end project first](https://github.com/DaniloGMattos/popcorntv-backend), after that you can follow this steps:**
 
 In the project directory, you can run:
 
 ### 
-``
-yarn 
+`
+yarn
 yarn start
-``
+`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -29,13 +29,9 @@ You will also see any lint errors in the console.
 
 For this  project, after the 3 days of the challenge I intend to archive 100% of the [Figma design](https://www.figma.com/file/6RhE6cOOnR5rd9dCEKlhZP/Untitled?node-id=14%3A188), including improving the Figma Design itself. To archive this goal I need to : 
 
+ - [] Show average move rating with a progress bar 
  - [] Create authentication system 
  - [] Use more data from the TMDb
  - [] Start working with animations
 
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
