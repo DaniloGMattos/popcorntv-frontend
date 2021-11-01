@@ -38,5 +38,7 @@ For this  project, after the 3 days of the challenge I intend to archive 100% of
  - [] Create authentication system 
  - [] Use more data from the TMDb
  - [] Start working with animations
+ - [] Pagination to deal with more pages from TMDb
+
 
 
