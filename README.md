@@ -16,6 +16,7 @@ In the project directory, you can run:
 
 ```shell
 yarn
+
 yarn start
 ```
 
@@ -24,6 +25,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+## Features implemented today 
+- Top movies screen
+- Movie details screen
 
 ## Futher development and point to improve
 
