@@ -4,6 +4,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 12rem;
+  &:hover {
+    cursor: pointer;
+  }
 
   div {
     height: 13rem;
@@ -14,6 +17,9 @@ export const Container = styled.div`
     display: flex;
     background-position: center;
     background-size: cover;
+    &:hover {
+      filter: brightness(70%);
+    }
     img {
       flex: 1;
     }

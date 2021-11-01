@@ -7,21 +7,19 @@ import { Container } from "./styles";
 export const Navbar = () => {
   return (
     <Container>
-      <nav className='container'>
-        <ul className='navigation'>
-          <li>
-            <Link to='/'>
-              <img src={logo} alt='Logo' />
-            </Link>
-          </li>
-          <li>
-            <Link to='/'>Filmes</Link>
-          </li>
-          <li>
-            <Link to='/television'>Televisão</Link>
-          </li>
-        </ul>
-      </nav>
+      <ul className='navigation'>
+        <li>
+          <Link to='/'>
+            <img src={logo} alt='Logo' />
+          </Link>
+        </li>
+        <li>
+          <Link to='/'>Movies</Link>
+        </li>
+        <li>
+          <Link to='/television'>Television</Link>
+        </li>
+      </ul>
     </Container>
   );
 };
