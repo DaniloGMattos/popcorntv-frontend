@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MovieBanner } from "../../components/MovieBanner";
+import { MovieSelector } from "../../components/MovieSelector";
+
 import api from "../../services/api";
 import { Container, Title } from "./styles";
 
@@ -38,6 +40,16 @@ export function Movies() {
       <Container>
         <section>
           <Title>Sucessos</Title>
+          <div className='grid'>
+            {movies.map((movie) => (
+              <MovieSelector
+                key={movie.id}
+                imagePath={movie.poster_path}
+                title={movie.title}
+                release_date={movie.release_date}
+              ></MovieSelector>
+            ))}
+          </div>
         </section>
       </Container>
     </>
