@@ -35,6 +35,7 @@ export const Container = styled.main`
       border-radius: 10px;
       font-size: 20px;
       margin-top: 1rem;
+      margin-left: 2.5rem;
     }
   }
 `;

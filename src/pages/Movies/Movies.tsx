@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import { MovieBanner } from "../../components/MovieBanner";
 import { MovieSelector } from "../../components/MovieSelector";
 
@@ -8,32 +9,32 @@ import { IMovie } from "../../utils/implementations/IMovie";
 
 export function Movies() {
   const [movies, setMovies] = useState<IMovie[]>([]);
-  const [imagePath, setImagePath] = useState("");
   const [isDetails, setIsDetails] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState<IMovie>({} as IMovie);
 
   useEffect(() => {
     async function loadMovies(): Promise<void> {
       const { data } = await api.get("/movies");
-      const firstImagePath = data[0].backdrop_path;
-      setImagePath(`https://image.tmdb.org/t/p/original/${firstImagePath}`);
+      const firstMovieData = data[0];
+      setSelectedMovie(firstMovieData);
       setMovies(data);
     }
 
     loadMovies();
   }, []);
   function handleMovieSelection(movie: IMovie) {
-    setIsDetails(true);
-    setImagePath(`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`);
-
     setSelectedMovie(movie);
+    setIsDetails(true);
   }
   function handleReturnToAllMovies() {
     setIsDetails(false);
   }
   return !isDetails ? (
     <>
-      <MovieBanner imagePath={imagePath} />
+      <MovieBanner
+        handleMovieSelection={handleMovieSelection}
+        selectedMovie={selectedMovie}
+      />
       <Container>
         <section>
           <Title>Top Rated</Title>
@@ -54,7 +55,11 @@ export function Movies() {
     </>
   ) : (
     <>
-      <MovieBanner isDetails imagePath={imagePath} />
+      <MovieBanner
+        selectedMovie={selectedMovie}
+        handleMovieSelection={handleMovieSelection}
+        isDetails
+      />
       <Container>
         <section className={isDetails ? "detailsSection" : ""}>
           <MovieSelector
@@ -69,13 +74,15 @@ export function Movies() {
             <h1>{selectedMovie.title}</h1> <h2>Sinopse & info</h2>{" "}
             <p>{selectedMovie.overview}</p>{" "}
           </div>
-          <button
-            onClick={() => {
-              handleReturnToAllMovies();
-            }}
-          >
-            Voltar
-          </button>
+          <div className='extraInfo'>
+            <button
+              onClick={() => {
+                handleReturnToAllMovies();
+              }}
+            >
+              Voltar
+            </button>
+          </div>
         </section>
       </Container>
     </>
