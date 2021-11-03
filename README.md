@@ -29,9 +29,9 @@ You will also see any lint errors in the console.
 ## Features implemented today
 
 - Top movies screen
-![Image of top movies]https://i.imgur.com/4ArTFhu.jpg
+![Image of top movies](https://i.imgur.com/4ArTFhu.jpg)
 - Movie details screen
-![Image of movie detail]https://i.imgur.com/BPnOqM2.jpg
+![Image of movie detail](https://i.imgur.com/BPnOqM2.jpg)
 
 ## Futher development and point to improve
 
